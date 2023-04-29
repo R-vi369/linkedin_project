@@ -114,7 +114,7 @@ const Section = styled.section`
  padding-bottom: 138px;
  padding-top: 40px;
  padding: 68px 0;
- padding: relative;
+ position: relative;
  flex-wrap: wrap;
  width: 100%;
  max-width: 1128px;
