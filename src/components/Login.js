@@ -46,7 +46,7 @@ const Container = styled.div`
 
           padding:0px;
         
-          `;
+    `;
 
 
 
@@ -96,7 +96,7 @@ const SignIn = styled.a`
  text-align: center;
  background-color: rgba(0,0,0,0);
  &:hover{
-  background-color: rgba(132, 181, 249, 0.35);
+  background-color: rgba(112, 181, 249, 0.15);
   color:  #0a66c2;
   text-decoration: none;
  }
@@ -113,7 +113,7 @@ const Section = styled.section`
  min-height: 700px;
  padding-bottom: 138px;
  padding-top: 40px;
- padding: 68px 0;
+ padding: 60px 0;
  position: relative;
  flex-wrap: wrap;
  width: 100%;
@@ -149,7 +149,7 @@ const Hero = styled.div`
 img{
   /* z-index: -1; */
   width: 700px;
-  height: 678px;
+  height: 670px;
   position: absolute;
   bottom: -2px;
   right: -150px;

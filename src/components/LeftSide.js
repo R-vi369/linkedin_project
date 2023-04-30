@@ -1,3 +1,4 @@
+
 import React from 'react'
 import styled from 'styled-components' 
 const LeftSide = () => {
@@ -31,6 +32,26 @@ const LeftSide = () => {
           </span>
         </Item>
        </ArtCard>
+
+       <CommunityCard>
+       <a>
+        <span>
+          Groups
+        </span>
+       </a>
+       <a>
+        <span>
+          Events
+          <img src="/images/plus-icon.svg" alt="" />
+        </span>
+       </a>
+       <a >
+        <span>Follow Hastags</span>
+       </a>
+       <a >
+        <span>Discover more</span>
+       </a>
+       </CommunityCard>
     </Container>
   )
 }
@@ -56,7 +77,7 @@ box-shadow: 0 0 0 1px rgb(0 0 0/15%), 0 0 0  rgb(0 0 0/20%);
 
 
 const UserInfo= styled.div`
- border-bottom: 1px solid rgba(0,0,0, 0.25);
+ border-bottom: 1px solid rgba(0,0,0, 0.15);
  padding: 12px 12px 16px;
  word-wrap: break-word;
  word-break: break-word;
@@ -121,7 +142,7 @@ padding-bottom: 12px;
       font-size: 12px;
       line-height: 1.333;
       &:first-child{
-        color: rgba(0,0,0.6);
+        color: rgba(0,0,0,0.6);
       }
       &:nth-child(2){
         color: rgba(0,0,0,1);
@@ -143,7 +164,7 @@ display: block;
 span{
   display:flex;
   align-items: center;
-  color: rgba(0,0,0,0.1);
+  color: rgba(0,0,0,1);
   svg{
     color: rgba(0,0,0,0.6);
   }
@@ -151,6 +172,39 @@ span{
 &:hover{
   background-color: rgba(0,0,0,0.08);
 }
+`;
+
+
+const CommunityCard= styled(ArtCard)`
+  padding:8px 0 0;
+  text-align:left;
+  display:flex;
+  flex-direction: column;
+  a{
+    color:black;
+    padding: 4px 12px 4px 12px;
+    font-size:12px;
+    &:hover{
+      color:#0a66c2;
+
+    }
+span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+&:last-child{
+  color: rgba(0,0,0,0.6);
+  text-decoration: none;
+  border-top:1px solid #d6cec2;
+  padding: 12px;
+  &:hover{
+    background-color:rgba(0,0,0,0.08)
+  }
+}
+
+  }
+
 `;
 
 export default LeftSide
