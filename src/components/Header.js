@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-// import Home from './Home'
+import Home from './Home'
 const Header = (props) => {
   return (
 <>
@@ -77,7 +77,7 @@ const Header = (props) => {
         </Nav>
       </Content>
     </Container>
-    {/* <Home/> */}
+    <Home/>
 </>
   )
 }

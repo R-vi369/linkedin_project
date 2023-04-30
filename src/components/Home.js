@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import LeftSide from './LeftSide'
+import Main from './Main'
+import RightSide from './RightSide'
 const Home = (props) => {
   return (
     <Container>
@@ -9,6 +12,11 @@ const Home = (props) => {
       </h5>
       <p>Find talented pros in record time with Upwork and keep business moving.</p>
     </Section>
+    <Layout>
+     <LeftSide/>
+     <Main/>
+     <RightSide/>
+    </Layout>
     </Container>
   )
 }
@@ -48,8 +56,25 @@ p{
   flex-direction: column;
   padding: 0 5px;
   
-  
 }
 `;
+
+
+
+  const Layout= styled.div`
+  display:grid ;
+  grid-template-areas: 'left  middle right';
+  grid-template-columns: minmax(0,5px) minmax(0, 12px) minmax(300px 7px);
+  column-gap: 25px;
+  row-gap: 25px;
+  grid-tamplate-row:auto;
+  margin: 25px 0;
+  @media (max-width:768px){
+    display: flex;
+    flex-direction: column;
+    padding: 0 5px;
+  }
+  
+  `;
 
 export default Home
