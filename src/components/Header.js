@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
+// import Home from './Home'
 const Header = (props) => {
   return (
+<>
     <Container>
       <Content>
         <Logo>
@@ -55,18 +57,34 @@ const Header = (props) => {
               </a>
             </NavList>
 
+            <User>
+              <a href="">
+                <img src="/images/user.svg" alt="" />
+                <span>Me</span>
+                <img src="/images/down-icon.svg" alt="" />
+              </a>
+              <SignOut>Sign Out</SignOut>
+            </User>
+            <Work>
+              <a href="">
+                <img src="/images/nav-work.svg" alt="" />
+                <span>Work</span>
+                <img src="/images/down-icon.svg" alt="" />
+              </a>
 
+            </Work>
           </NavListWrap>
         </Nav>
       </Content>
     </Container>
-
+    {/* <Home/> */}
+</>
   )
 }
 
 
 
-const Container = styled.div`
+const Container = styled.div` 
   background-color: white;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   left: 0;
@@ -90,7 +108,7 @@ const Logo = styled.span`
  margin-right: 8px;
  font-size: 8px;
  `;
- const Search = styled.div`
+const Search = styled.div`
  opacity:1;
  flex-grow: 1;
  position:relative;
@@ -120,7 +138,7 @@ const Logo = styled.span`
  }
  
  `;
- const SearchIcon = styled.div`
+const SearchIcon = styled.div`
  
  width: 40px;
  position: absolute;
@@ -137,7 +155,7 @@ const Logo = styled.span`
  
  `;
 
- const Nav = styled.nav`
+const Nav = styled.nav`
  margin-left: auto;
  display: block;
  @media (max-width:768px) {
@@ -209,4 +227,46 @@ a{
 }
 
 `;
+
+const SignOut = styled.div`
+position:absolute;
+top: 45px;
+background:white;
+border-radius: 0 0 5px 5px;
+width:100px;
+height:40px;
+font-size:16px;
+transition-duration:167ms;
+text-align: center;
+display:none;
+`;
+
+
+const User =styled(NavList)`
+a >svg{
+  width:24px;
+  border-radius:50%;
+}
+a>img{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+}
+ span{
+  display:flex;
+  align-items:center;
+ }
+ &:hover{
+  ${SignOut}{
+    align-items:center;
+    display: flex;
+    justify-content: center;
+  }
+ }
+`;
+const Work= styled(User)`
+border-left: 2px solid rgba(0,0,0,0.08);
+`;
+
+
 export default Header
