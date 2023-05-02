@@ -1,9 +1,9 @@
-const INTIAL_STATE ={
+const INITIAL_STATE ={
     user: null,
 };
 
 
-const userReducer = (state= INTIAL_STATE, action) =>{
+const userReducer = (state= INITIAL_STATE, action) =>{
     switch(action.type){
         default:
             return state;
