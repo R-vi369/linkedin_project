@@ -1,3 +1,4 @@
+import '../login.css';
 import styled from 'styled-components';
 const Login = (props) => {
   return (
@@ -7,7 +8,25 @@ const Login = (props) => {
         <a href="/">
           <img src="/images/login-logo.svg" alt="" />
         </a>
-
+        <div className='login_4icons'>
+          {/* <div className='login_icon'>
+            <img className='discover' src="/images/discover.png" alt="discover" />
+            <span>Discover</span>
+          </div> */}
+          <div className='login_icon'>
+            <img src="/images/nav-network.svg" alt="" />
+            <span>People</span>
+          </div>
+          <div className='login_icon'>
+            <img src="/images/Learning.png" alt="" />
+            <span>Learing</span>
+          </div>
+          <div className='login_icon'>
+            <img src="/images/nav-jobs.svg" alt="" />
+            <span>job</span>
+          </div>
+        </div>
+      
         <div>
           <Join>
             Join Now
@@ -23,13 +42,13 @@ const Login = (props) => {
           <h1>Welcome to your professional community</h1>
           <img src="/images/login-hero.svg" alt="" />
         </Hero>
- 
-       <Form>
-      <Google>
-      <img src="/images/google.svg" alt="" />
-      Sign in with google
-      </Google>
-       </Form>
+
+        <Form>
+          <Google>
+            <img src="/images/google.svg" alt="" />
+            Sign in with google
+          </Google>
+        </Form>
       </Section>
     </Container>
 
@@ -64,6 +83,7 @@ const Nav = styled.nav`
               }
              
                }
+              
           `;
 const Join = styled.a`
     font-size: 16px;
